@@ -1,5 +1,6 @@
 require('pg')
 require_relative('../db/sql_runner')
+require_relative('songs')
 require_relative('albums')
 
 class Collector
@@ -9,7 +10,7 @@ class Collector
 
   def initialize( options )
     @name = options[ 'name' ]
-    @id = options[ 'id' ]
+    @id = options['id'].to_i if options['id']
   end
 
   def save

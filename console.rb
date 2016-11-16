@@ -1,6 +1,8 @@
 require('pry-byebug')
+require_relative('models/songs')
 require_relative('models/albums')
 require_relative('models/collectors')
+
 
 
 Album.delete_all
@@ -20,6 +22,13 @@ album1 = Album.new({
   })
 
 album1.save()   #remember the order of the save
+
+song1 = Song.new({
+  "song" => "Lying Eyes",
+  "album_id" => album1.id
+  })
+
+song1.save()
 
 binding.pry
 nil
