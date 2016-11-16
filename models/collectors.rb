@@ -15,7 +15,7 @@ class Collector
     "INSERT INTO collectors
     (name)
     VALUES
-    ('#{@name}');
+    ('#{@name}') RETURNING *;
     "
     result = SqlRunner.run( sql )
     @id = result[0]['id'].to_i

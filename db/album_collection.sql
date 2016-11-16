@@ -3,7 +3,7 @@ DROP TABLE IF EXISTS records;
 
 CREATE TABLE collectors (
 id SERIAL8 primary key,
-name VARCHAR(255) NOT NULL,
+name VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE albums  (
