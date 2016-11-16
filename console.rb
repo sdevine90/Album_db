@@ -1,10 +1,16 @@
 require('pry-byebug')
-require_relative('models/collectors')
 require_relative('models/albums')
+require_relative('models/collectors')
+
+
+Album.delete_all
+Collector.delete_all
 
 collector1 = Collector.new({
   "name"  =>  "Stephanie",
   })
+
+collector1.save() #remember the order of the saves and deletes
 
 album1 = Album.new({
   "artist"  =>  "The Eagles",
@@ -13,7 +19,7 @@ album1 = Album.new({
   "collector_id"  => collector1.id
   })
 
-collector1.save()
+album1.save()   #remember the order of the save
 
 binding.pry
 nil

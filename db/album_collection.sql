@@ -1,5 +1,6 @@
+DROP TABLE IF EXISTS albums;
 DROP TABLE IF EXISTS collectors;
-DROP TABLE IF EXISTS records;
+
 
 CREATE TABLE collectors (
 id SERIAL8 primary key,
