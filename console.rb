@@ -4,7 +4,7 @@ require_relative('models/albums')
 require_relative('models/collectors')
 
 
-
+Song.delete_all
 Album.delete_all
 Collector.delete_all
 
