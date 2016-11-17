@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS songs;
+DROP TABLE IF EXISTS songs; #go
 DROP TABLE IF EXISTS albums;
 DROP TABLE IF EXISTS collectors;
 
@@ -22,3 +22,6 @@ id SERIAL8 primary key,
 song_title VARCHAR(255) NOT NULL,
 album_id INT8 references albums(id)
 );
+
+
+#whatever order you create is the opposite in the drop. Drop is a blank table until we use create to make it

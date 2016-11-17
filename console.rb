@@ -14,6 +14,7 @@ collector1 = Collector.new({
 
 collector1.save() #remember the order of the saves and deletes
 
+
 album1 = Album.new({
   "artist"  =>  "The Eagles",
   "title" =>  "Take it Easy",
@@ -21,10 +22,14 @@ album1 = Album.new({
   "collector_id"  => collector1.id
   })
 
+
+
 album1.save()   #remember the order of the save
 
+
+
 song1 = Song.new({
-  "song" => "Lying Eyes",
+  "song_title" => "Lying Eyes",
   "album_id" => album1.id
   })
 

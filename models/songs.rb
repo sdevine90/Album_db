@@ -22,6 +22,14 @@ class Song
     @id = result[0]['id'].to_i
   end
 
+  def update
+    sql = 
+    "UPDATE songs
+    SET (song_title, album_id) = 
+    ('#{@song_title}', #{@album_id}) WHERE id =#{@id};" #where id picks just one
+    SqlRunner.run(sql)
+  end
+
   def self.delete_all
     sql = "DELETE FROM songs;"
     SqlRunner.run(sql)
